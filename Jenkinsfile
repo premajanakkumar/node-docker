@@ -1,9 +1,9 @@
 node {
     def app
 
-    stage('Clone repository') {
+    stage('checkout') {
         /* Let's make sure we have the repository cloned to our workspace */
-        sh 'git clone '
+         git branch: 'main', url: 'https://github.com/premajanakkumar/node-docker.git'
         
     }
 
